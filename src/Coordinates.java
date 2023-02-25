@@ -20,6 +20,12 @@ public class Coordinates {
         return this.height;
     }
 
+    public void setCoordinates(int Lo, int La, int H) {
+        this.longitude = Lo;
+        this.latitude = La;
+        this.height = H;
+    }
+
     public static Coordinates createCoordinates(int Lo, int La, int H) {
         return new Coordinates(Lo, La, H);
     }

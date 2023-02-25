@@ -1,4 +1,4 @@
 public interface Flyable {
-    public void updateConditions();
-    public void registerTower(WeatherTower T);
+    public void updateConditions() throws Exception;
+    public void registerTower(WeatherTower T) throws Exception;
 }

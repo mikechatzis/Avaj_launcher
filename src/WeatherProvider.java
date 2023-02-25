@@ -4,7 +4,7 @@ import java.util.Random;
 public class WeatherProvider {
     private static WeatherProvider Wp;
     private final String weather[] = {"FOG", "SUN", "RAIN", "SNOW"};
-    private ArrayList< WeatherAtCoordinates > WaC;
+    private ArrayList< WeatherAtCoordinates > WaC = new ArrayList<WeatherAtCoordinates>();
 
     private WeatherProvider(){}
 

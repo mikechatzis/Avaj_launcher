@@ -1,19 +1,24 @@
 public class AircraftFactory {
-    public Flyable newAircraftType(String type,
-                                   String name,
+    public Flyable newAircraftType(final String type,
+                                   final String name,
                                    int Lo,
                                    int La,
-                                   int H) {
+                                   int H) throws Exception {
+
+        Flyable F;
         switch (type) {
             case "Baloon":
-                return Baloon.createBaloon(name, Coordinates.createCoordinates(Lo, La, H));
+                F =  Baloon.createBaloon(name, Coordinates.createCoordinates(Lo, La, H));
+                break;
             case "JetPlane":
-                return JetPlane.createJetPlane(name, Coordinates.createCoordinates(Lo, La, H));
+                F =  JetPlane.createJetPlane(name, Coordinates.createCoordinates(Lo, La, H));
+                break;
             case "Helicopter":
-                return Helicopter.createHelicopter(name, Coordinates.createCoordinates(Lo, La, H));
+                F =  Helicopter.createHelicopter(name, Coordinates.createCoordinates(Lo, La, H));
+                break;
             default:
-                return null;
-            
-        }
+                F = null;
+            }
+            return F; 
     }
 }

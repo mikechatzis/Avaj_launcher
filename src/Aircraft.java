@@ -6,7 +6,9 @@ public class Aircraft {
     protected String  name;
     protected Coordinates coordinates;
 
-    protected Aircraft(String name, Coordinates coordinates){
+    protected Aircraft(String name, Coordinates coordinates) throws Exception {
+        if (name == null || coordinates == null)
+            throw new customException((name == null) ? "Aircraft name can't be null" : "Aircraft coordinates must be a valid object");
         this.id = nextId();
         this.name = name;
         this.coordinates = coordinates;
