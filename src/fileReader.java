@@ -6,6 +6,7 @@ public class fileReader {
     private Vector<String> lines = new Vector<String>();
     private Vector<Flyable> aircrafts = new Vector<Flyable>();
     private WeatherTower T = new WeatherTower();
+    fileWriter W =  new fileWriter();
 
     public fileReader(String filePath) throws Exception {
         final File scenario = new File(filePath);
@@ -52,6 +53,10 @@ public class fileReader {
         for (int i = 0; i < Integer.parseInt(lines.elementAt(0)); ++i) {
             for (int j = 0; j < aircrafts.size(); ++j) {
                 aircrafts.elementAt(j).updateConditions();
+                if (aircrafts.elementAt(j).getAircraftHeight() <= 0) {
+                    aircrafts.removeElementAt(j);
+                    --j;
+                }
             }
         }
     }

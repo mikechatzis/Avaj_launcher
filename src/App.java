@@ -10,7 +10,11 @@ public class App {
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
             return;
+        }
+        finally {
+            fileWriter.printWriter.close();
         }
     }
 }
