@@ -28,6 +28,10 @@ public class WeatherProvider {
                                          curWeather));
         return curWeather;
     }
+
+    public static void changeWeather() {
+        Wp = new WeatherProvider();
+    }
 }
 
 class WeatherAtCoordinates {

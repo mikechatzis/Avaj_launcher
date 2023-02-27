@@ -11,6 +11,6 @@ public class WeatherTower extends Tower {
     }
 
     private void changeWeather() {
-        WeatherProvider.getProvider();
+        WeatherProvider.changeWeather();
     }
 }
