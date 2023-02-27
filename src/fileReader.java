@@ -17,10 +17,6 @@ public class fileReader {
         reader.close();
     }
 
-    public Vector<String> getScenario() {
-        return this.lines;
-    }
-
     public void createAircrafts() throws Exception {
         for (int i = 1; i < this.lines.size(); ++i) {
             String[] split = this.lines.elementAt(i).split(" ");
