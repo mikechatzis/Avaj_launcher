@@ -7,10 +7,10 @@ public class WeatherTower extends Tower {
         boolean b = rand.nextBoolean();
         if(b)
             changeWeather();
-        return Wp.getCurrentWeather(C);
+        return WeatherProvider.getCurrentWeather(C);
     }
 
     private void changeWeather() {
-        Wp = WeatherProvider.getProvider();
+        WeatherProvider.getProvider();
     }
 }
